@@ -5,7 +5,12 @@ int main(){
     int bol = 1;
     
     scanf("%d",&input);
-    for(int i = 2; i<=sizeof(input)/2;i++){
+    if(input == 1){
+        printf("false");
+        return 0;
+    }
+    for(int i = 2; i<=input/2;i++){
+        printf("%d %d   = %d",input,i,input%i);
         if(input % i == 0)
             bol = 0;
     }
